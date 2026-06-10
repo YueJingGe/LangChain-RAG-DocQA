@@ -1,4 +1,4 @@
-# 🧠 RAG-demo：从零搭建 RAG 知识库问答系统
+# 🧠 LangChain-RAG-DocQA：从零搭建 RAG 知识库问答系统
 
 [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
 [![LangChain](https://img.shields.io/badge/LangChain-Framework-green.svg)](https://www.langchain.com/)
@@ -8,7 +8,7 @@
 
 > 使用 **LangChain + DeepSeek + FAISS** 搭建的 RAG（检索增强生成）知识库问答系统。支持 TXT / PDF 文档，适合 AI 初学者从零理解 RAG 架构思想并动手实践。
 >
-> **关键词**：RAG、检索增强生成、LangChain、DeepSeek、FAISS、向量检索、知识库问答、中文NLP、PDF问答、LLM应用开发
+> **关键词**：RAG、检索增强生成、LangChain、DeepSeek、FAISS、向量检索、知识库问答、中文 NLP、PDF 问答、LLM 应用开发
 
 ---
 
@@ -133,13 +133,11 @@ qa.invoke("你的问题")  ← 你只需要这一行
 
 ---
 
-## Demo 学习路径
-
-建议按以下顺序学习，从简单到复杂：
+## Demo 介绍
 
 ### 📘 Demo 1：TXT 文本问答（`txt_rag_demo.ipynb`）
 
-**学习目标**：理解 RAG 的最小完整流程
+**目标**：理解 RAG 的最小完整流程
 
 - 使用一段简短的 AI 概念文本作为知识库
 - 涵盖：加载 → 分块 → 向量化 → 存储 → 问答的完整链路
@@ -147,7 +145,7 @@ qa.invoke("你的问题")  ← 你只需要这一行
 
 ### 📕 Demo 2：PDF 文档问答（`pdf_rag_demo.ipynb`）
 
-**学习目标**：掌握真实文档场景下的 RAG 实践
+**目标**：掌握真实文档场景下的 RAG 实践
 
 以「低空无人机集群通信.pdf」为知识库，在 Demo 1 的基础上新增：
 
@@ -162,10 +160,28 @@ qa.invoke("你的问题")  ← 你只需要这一行
 
 ---
 
+## 项目截图
+
+以下是项目运行的效果截图：
+
+### TXT 问答效果
+
+![TXT问答答案](images/txt问答答案.png)
+
+### PDF 问答效果
+
+![PDF问答答案](images/pdf问答答案.png)
+
+### PDF 问答溯源功能
+
+![PDF问答显示来源](images/pdf问答显示来源.png)
+
+---
+
 ## 项目目录结构
 
 ```
-RAG-demo/
+LangChain-RAG-DocQA/
 ├── .env                    # 环境配置（API Key 等，不要提交到 Git）
 ├── .gitignore              # Git 忽略规则
 ├── readme.md               # 本文档
@@ -232,6 +248,10 @@ python3 -m venv venv
 source venv/bin/activate
 # 激活成功后，终端左边会出现 (venv) 提示符
 
+# 如果需要安装jupyter
+pip install jupyter
+
+
 # 不用时退出虚拟环境
 deactivate
 ```
@@ -264,6 +284,25 @@ python3 -m pip install langchain-deepseek
 安装完成后看到 `Successfully installed ...` 就说明一切就绪了 ✅
 
 ---
+
+## 项目启动
+
+### 方式一：jupyter
+
+比较复杂
+
+```bash
+# 安装jupyter
+pip install jupyter
+# 运行指定的notebook
+jupyter nbconvert --to notebook --execute txt_rag_demo.ipynb
+# 或者
+jupyter nbconvert --to notebook --execute pdf_rag_demo.ipynb
+```
+
+### 方式二
+
+进入 .ipynb 文件，然后选择内核，然后点击全部运行即可
 
 ## 常见问题
 
