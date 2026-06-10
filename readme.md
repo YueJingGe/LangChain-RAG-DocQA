@@ -29,9 +29,7 @@
 
 ---
 
-## Demo 介绍
-
-### 📘 Demo 1：TXT 文本问答（`txt_rag_demo.ipynb`）
+## 📘 Demo 1：TXT 文本问答（`txt_rag_demo.ipynb`）
 
 **目标**：理解 RAG 的最小完整流程
 
@@ -39,7 +37,7 @@
 - 涵盖：加载 → 分块 → 向量化 → 存储 → 问答的完整链路
 - 代码简洁，适合初学者跑通第一个 RAG 应用
 
-### 📕 Demo 2：PDF 文档问答（`pdf_rag_demo.ipynb`）
+## 📕 Demo 2：PDF 文档问答（`pdf_rag_demo.ipynb`）
 
 **目标**：掌握真实文档场景下的 RAG 实践
 
